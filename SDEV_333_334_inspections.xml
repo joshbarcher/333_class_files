@@ -1,5 +1,5 @@
 <profile version="1.0">
-  <option name="myName" value="Project Default" />
+  <option name="myName" value="SDEV_333_334_inspections" />
   <inspection_tool class="AbstractClassNamingConvention" enabled="true" level="WARNING" enabled_by_default="true">
     <option name="m_minLength" value="3" />
   </inspection_tool>
