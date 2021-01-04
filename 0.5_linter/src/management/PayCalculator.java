@@ -2,12 +2,12 @@ package management;
 
 public class PayCalculator
 {
-    double pay;
+    double payAmount;
     String EmployeeFullName;
 
-    public PayCalculator(double pay, String EmployeeFullName)
+    public PayCalculator(double payAmount, String EmployeeFullName)
     {
-        this.pay = pay;
+        this.payAmount = payAmount;
         this.EmployeeFullName = EmployeeFullName;
     }
 
@@ -15,15 +15,15 @@ public class PayCalculator
     {
         if (salaried)
         {
-            return pay;
+            return payAmount;
         }
         else
         {
-            double total = hours * pay;
+            double total = hours * payAmount;
 
             if (hours > 40)
             {
-                total += hours * (0.5 * pay);
+                total += hours * (0.5 * payAmount);
             }
 
             return total;

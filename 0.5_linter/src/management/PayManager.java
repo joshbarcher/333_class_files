@@ -8,48 +8,81 @@ import java.util.ArrayList;
 
 public class PayManager
 {
-    private String name;
+    private static String name;
 
-    public void main(String[] args)
+    public static void main(String[] args)
     {
-        //test our pay calculator
-        try (Scanner console = new Scanner(System.in))
-        {
-            //enter a name
-            System.out.println("Enter a name: ");
-            name = console.nextLine();
-            System.out.println("Your name is: " + name);
-
-            //get a pay rate and print the pay
-            double payRate = console.nextDouble();
-            PayCalculator calculator = new PayCalculator(22.0, name);
-            double pay = calculator.calculatePay(false, 55);
-
-            System.out.println("Pay: " + pay);
-        }
-        catch (InputMismatchException ex)
-        {
-            //do nothing...
-        }
-        catch (Exception ex)
-        {
-            System.out.println("Error!");
-        }
-
         //run a second test
         try (Scanner console = new Scanner(System.in))
         {
             //enter a name
-            System.out.println("Enter a name: ");
+            System.out.print("Enter a name: ");
             name = console.nextLine();
-            System.out.println("Your name is: " + name);
 
             //get a pay rate and print the pay
-            double payRate = console.nextDouble();
-            PayCalculator calculator = new PayCalculator(22.0, name);
-            double pay = calculator.calculatePay(false, 55);
+            System.out.print("Enter a payrate: ");
+            double pay_rate = console.nextDouble();
+            console.nextLine();
 
-            System.out.println("Pay: " + pay);
+            //enter an amount of hours
+            System.out.print("Enter # of hours: ");
+            int hours = console.nextInt();
+            console.nextLine();
+
+            //pad hours by 12
+            hours += 12;
+
+            PayCalculator calculator = new PayCalculator(pay_rate, name);
+            double pay = calculator.calculatePay(false, hours);
+
+            System.out.println("Pay: $" + pay);
+            System.out.println();
+
+            //enter a name
+            System.out.print("Enter a name: ");
+            name = console.nextLine();
+
+            //get a pay rate and print the pay
+            System.out.print("Enter a payrate: ");
+            pay_rate = console.nextDouble();
+            console.nextLine();
+
+            //enter an amount of hours
+            System.out.print("Enter # of hours: ");
+            hours = console.nextInt();
+            console.nextLine();
+
+            //pad hours by 12
+            hours += 12;
+
+            calculator = new PayCalculator(pay_rate, name);
+            pay = calculator.calculatePay(false, hours);
+
+            System.out.println("Pay: $" + pay);
+            System.out.println();
+
+            //enter a name
+            System.out.print("Enter a name: ");
+            name = console.nextLine();
+
+            //get a pay rate and print the pay
+            System.out.print("Enter a payrate: ");
+            pay_rate = console.nextDouble();
+            console.nextLine();
+
+            //enter an amount of hours
+            System.out.print("Enter # of hours: ");
+            hours = console.nextInt();
+            console.nextLine();
+
+            //pad hours by 12
+            hours += 12;
+
+            calculator = new PayCalculator(pay_rate, name);
+            pay = calculator.calculatePay(false, hours);
+
+            System.out.println("Pay: $" + pay);
+            System.out.println();
         }
         catch (InputMismatchException ex)
         {
