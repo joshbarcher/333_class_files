@@ -11,7 +11,7 @@ package adts;
  * @author Josh Archer
  * @version 1.0
  */
-public interface ICollection<T> extends Iterable<T>
+public interface ICollection<T>
 {
     /**
      * Adds an element to the collection.

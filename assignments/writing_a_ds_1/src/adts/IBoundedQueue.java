@@ -54,10 +54,4 @@ public interface IBoundedQueue<T> extends ICollection<T>
      * is empty
      */
     T remove();
-
-    /**
-     * Returns elements in FIFO order from the underlying queue
-     * @return all elements in the queue, in FIFO order
-     */
-    Iterator<T> iterator();
 }
