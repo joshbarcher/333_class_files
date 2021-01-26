@@ -4,6 +4,7 @@ import adts.IOrderedList;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import structures.OrderedListAL;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
@@ -17,7 +18,7 @@ public class ListTests
     private IOrderedList<Integer> createList()
     {
         //instantiate your class here!
-        return null;
+        return new OrderedListAL<>();
     }
 
     @Before
@@ -230,6 +231,43 @@ public class ListTests
                 //do nothing, this is correct...
             }
         }
+    }
+
+    @Test
+    public void removeFirstTest()
+    {
+        //add a few elements
+        int[] elemsToAdd = {2, 4, 6, 4, 5, 4};
+        for (int i = 0; i < elemsToAdd.length; i++)
+        {
+            list.add(elemsToAdd[i]);
+        }
+
+        Assert.assertEquals("The size of your list should be 6 after " +
+                            "calling add() 6 times",
+                6, list.size());
+
+        //remove first duplicate
+        list.remove(4);
+        Assert.assertEquals("The size of your list should be one smaller after " +
+                        "removing a duplicate element",
+                5, list.size());
+        Assert.assertTrue("remove() is removing all elements rather than " +
+                "the first occurrence of an element", list.contains(4));
+
+        //remove second duplicate
+        list.remove(4);
+        Assert.assertEquals("The size of your list should be one smaller after " +
+                        "removing a duplicate element",
+                4, list.size());
+        Assert.assertTrue("remove() is removing all elements rather than " +
+                "the first occurrence of an element", list.contains(4));
+
+        //remove remaining element
+        list.remove(4);
+        Assert.assertFalse("List should not contain an element after all " +
+                          "instances of the duplicated element are removed",
+                          list.contains(4));
     }
 
     @Test(expected = NoSuchElementException.class)
