@@ -1,6 +1,6 @@
-package tic_tac_toe;
+package tictactoe.game;
 
-import helpers.Console;
+import tictactoe.helpers.Console;
 
 /**
  * Simulates a game of tic-tac-toe on the Java console.

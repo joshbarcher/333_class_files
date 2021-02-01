@@ -1,4 +1,4 @@
-package tic_tac_toe;
+package tictactoe.game;
 
 /**
  * Represents a tic-tac-toe board.

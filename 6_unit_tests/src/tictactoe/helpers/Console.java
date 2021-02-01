@@ -1,4 +1,4 @@
-package helpers;
+package tictactoe.helpers;
 
 import java.util.Scanner;
 
