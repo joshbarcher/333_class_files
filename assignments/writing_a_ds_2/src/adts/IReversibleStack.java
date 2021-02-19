@@ -13,7 +13,7 @@ import java.util.Iterator;
  * @author Josh Archer
  * @version 1.0
  */
-public interface IReversableStack<T> extends ICollection<T>
+public interface IReversibleStack<T> extends ICollection<T>
 {
     /**
      * Reverses the order of all elements in the stack.

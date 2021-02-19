@@ -4,7 +4,6 @@ import adts.IOrderedList;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import structures.OrderedListAL;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;

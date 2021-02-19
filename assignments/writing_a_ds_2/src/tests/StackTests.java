@@ -1,6 +1,6 @@
 package tests;
 
-import adts.IReversableStack;
+import adts.IReversibleStack;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
