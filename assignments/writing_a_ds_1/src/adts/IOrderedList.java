@@ -32,4 +32,12 @@ public interface IOrderedList<T extends Comparable<T>> extends ICollection<T>
      * an index greater or equal to size()
      */
     T get(int index);
+
+    /**
+     * Returns elements in sorted (ascending) order from the
+     * underlying list
+     *
+     * @return all elements in the stack, in sorted order
+     */
+    Iterator<T> iterator();
 }
