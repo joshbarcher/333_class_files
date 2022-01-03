@@ -20,7 +20,7 @@ public interface Collection
 	
 	//misc methods
 	public boolean equals(Object other);
-	public int hashcode();
+	public int hashCode();
 	public Iterator iterator();
 	public Object[] toArray();
 }
