@@ -29,4 +29,11 @@ public interface IReversibleStack<T> extends ICollection<T>
      * @throws java.util.NoSuchElementException when the stack is empty
      */
     T remove();
+
+    /**
+     * Returns elements in FILO order from the underlying stack
+     * @return all elements in the stack, in FILO order
+     */
+    @Override
+    Iterator<T> iterator();
 }

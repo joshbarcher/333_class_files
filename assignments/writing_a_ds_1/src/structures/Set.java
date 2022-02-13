@@ -1,6 +1,6 @@
 package structures;
 
-public class BoundedQueue
+public class Set
 {
 
 }

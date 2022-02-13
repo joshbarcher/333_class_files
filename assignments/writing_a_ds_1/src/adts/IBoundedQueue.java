@@ -21,6 +21,7 @@ public interface IBoundedQueue<T> extends ICollection<T>
      * @param element the element to add'
      * @throws IllegalStateException if the queue is full
      */
+    @Override
     void add(T element);
 
     /**
@@ -44,6 +45,7 @@ public interface IBoundedQueue<T> extends ICollection<T>
      * @param element the input element to remove
      * @throws UnsupportedOperationException when called
      */
+    @Override
     void remove(T element);
 
     /**
@@ -54,4 +56,11 @@ public interface IBoundedQueue<T> extends ICollection<T>
      * is empty
      */
     T remove();
+
+    /**
+     * Returns elements in FIFO order from the underlying queue
+     * @return all elements in the queue, in FIFO order
+     */
+    @Override
+    Iterator<T> iterator();
 }
