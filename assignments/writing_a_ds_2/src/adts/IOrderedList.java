@@ -17,10 +17,12 @@ public interface IOrderedList<T extends Comparable<T>> extends ICollection<T>
 {
     /**
      * Adds an element to the collection, while maintaining the order
-     * of all elements in the collection.
+     * of all elements in the collection. Elements should always be
+     * in ascending order.
      *
      * @param element the element to add
      */
+    @Override
     void add(T element);
 
     /**
@@ -39,5 +41,6 @@ public interface IOrderedList<T extends Comparable<T>> extends ICollection<T>
      *
      * @return all elements in the stack, in sorted order
      */
+    @Override
     Iterator<T> iterator();
 }

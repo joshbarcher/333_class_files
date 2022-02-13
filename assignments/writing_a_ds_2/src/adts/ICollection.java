@@ -21,7 +21,8 @@ public interface ICollection<T> extends Iterable<T>
     void add(T element);
 
     /**
-     * Searches for and removes an element from the collection.
+     * Searches for and removes the first occurrence of an element
+     * from the collection.
      *
      * @param element the element to search for
      * @throws java.util.NoSuchElementException if the element

@@ -34,5 +34,6 @@ public interface IReversibleStack<T> extends ICollection<T>
      * Returns elements in FILO order from the underlying stack
      * @return all elements in the stack, in FILO order
      */
+    @Override
     Iterator<T> iterator();
 }
