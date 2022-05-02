@@ -4,11 +4,9 @@ import adts.ISet;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import structures.SetLL;
 
-import java.util.ConcurrentModificationException;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Tests an implementation of the ISet interface.
@@ -409,10 +407,22 @@ public class SetTest
         int count = 0;
         for (int element : set)
         {
-            Assert.assertEquals("next() should return all elements",
-                                noDupsArray[count].intValue(), element);
+            Assert.assertTrue("next() should return all elements",
+                    foundInNoDuplicatesArray(element));
             count++;
         }
+    }
+
+    private boolean foundInNoDuplicatesArray(int search)
+    {
+        for (int i = 0; i < noDupsArray.length; i++)
+        {
+            if (noDupsArray[i] == search)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
