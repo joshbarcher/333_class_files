@@ -6,7 +6,7 @@ public class HeightExperiment
 {
     public static void main(String[] args)
     {
-
+        multipleTrials();
     }
 
     private static void trial(int size)
@@ -14,7 +14,7 @@ public class HeightExperiment
         //create a tree
         BinarySearchTree<Integer> tree = new BinarySearchTree<>();
 
-        //add 1,000,000 random elements
+        //add random elements
         Random random = new Random();
         for (int i = 1; i <= size; i++)
         {

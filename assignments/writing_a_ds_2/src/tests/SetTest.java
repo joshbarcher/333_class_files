@@ -386,9 +386,9 @@ public class SetTest
         for (int i = 0; i < noDupsArray.length; i++)
         {
             Assert.assertTrue("hasNext() should return true for existing elements in the list",
-                              iter.hasNext());
-            Assert.assertEquals("next() should return elements in order of insertion",
-                                noDupsArray[i], iter.next());
+                    iter.hasNext());
+            Assert.assertTrue("next() should return all elements",
+                    foundInNoDuplicatesArray(iter.next()));
         }
 
         Assert.assertFalse("Iterator should not report more elements after all have been returned",
